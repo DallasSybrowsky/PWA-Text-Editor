@@ -12,7 +12,7 @@
     "client": ""
   },
   "keywords": [],
-  "author": "",
+  "author": "Dallas Sybrowsky",
   "license": "ISC",
   "dependencies": {
     "express": "^4.17.1",
