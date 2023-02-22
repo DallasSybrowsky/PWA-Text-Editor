@@ -24,8 +24,8 @@ module.exports = () => {
       }),
       // Injects the custom service work from src-sw.js
       new InjectManifest({
-        swSrc: "./src/sw.js",
-        swDest: "service-worker.js",
+        swSrc: "./src-sw.js",
+        swDest: "src-sw.js",
       }),
       // function to create manifest.json
       new WebpackPwaManifest({
@@ -39,7 +39,7 @@ module.exports = () => {
           "Online text editor with offline capabilities powered by IndexedDB",
         icons: [
           {
-            src: path.resolve("/assets/images/logo.png"),
+            src: path.resolve("src/images/logo.png"),
             sizes: [96, 128, 192, 512],
             destination: path.join("assets", "icons"),
           },
@@ -50,7 +50,7 @@ module.exports = () => {
       rules: [
         {
           test: /\.css$/i,
-          use: [MiniCssExtractPlugin.loader, "css-loader"],
+          use: ["style-loader", "css-loader"],
         },
         {
           test: /\.m?js$/,
