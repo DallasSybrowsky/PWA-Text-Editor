@@ -18,15 +18,25 @@ module.exports = () => {
       path: path.resolve(__dirname, "dist"),
     },
     plugins: [
-      new MiniCssExtractPlugin(),
+      new HtmlWebpackPlugin({
+        template: "./index.html",
+        title: "J.A.T.E.",
+      }),
+      // Injects the custom service work from src-sw.js
       new InjectManifest({
         swSrc: "./src/sw.js",
         swDest: "service-worker.js",
       }),
+      // function to create manifest.json
       new WebpackPwaManifest({
-        short_name: "Manifest",
-        name: "JATE Manifest",
+        fingerprints: false,
+        inject: true,
+        short_name: "J.A.T.E.",
+        name: "Just Another Text Editor",
         start_url: "/",
+        publicPath: "/",
+        description:
+          "Online text editor with offline capabilities powered by IndexedDB",
         icons: [
           {
             src: path.resolve("/assets/images/logo.png"),
@@ -34,9 +44,6 @@ module.exports = () => {
             destination: path.join("assets", "icons"),
           },
         ],
-        orientation: "portrait",
-        display: "standalone",
-        description: "Just Another Text Editor: one more way to edit text.",
       }),
     ],
     module: {
@@ -52,6 +59,10 @@ module.exports = () => {
             loader: "babel-loader",
             options: {
               presets: ["@babel/preset-env"],
+              plugins: [
+                "@babel/plugin-proposal-object-rest-spread",
+                "@babel/transform-runtime",
+              ],
             },
           },
         },
