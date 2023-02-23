@@ -26,7 +26,7 @@ This application is deployed to Heroku and can be used on or offline thanks to P
 
 ## Installation
 
-In order to install the application, please use the following command: 
+In order to install the application, simply click the install button on the page in the browser.
 
 ## Contribution
 
