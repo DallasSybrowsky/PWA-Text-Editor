@@ -39,7 +39,7 @@ module.exports = () => {
           "Online text editor with offline capabilities powered by IndexedDB",
         icons: [
           {
-            src: path.resolve("src/images/logo.png"),
+            src: path.resolve("./src/images/logo.png"),
             sizes: [96, 128, 192, 512],
             destination: path.join("assets", "icons"),
           },
