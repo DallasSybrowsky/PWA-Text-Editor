@@ -22,7 +22,7 @@ This project is the original work of Dallas Sybrowsky. More of my work is availa
 
 ## Usage
 
-This application is deployed to Heroku and can be used on or offline thanks to PWA modules and plugins. Simply navigate to the link by clicking [here]() and you may install the app on your computer.
+This application is deployed to Heroku and can be used on or offline thanks to PWA modules and plugins. Simply navigate to the link by clicking [here](https://dsybrowsky-jate-text-editor.herokuapp.com/) and you may install the app on your computer.
 
 ## Installation
 
