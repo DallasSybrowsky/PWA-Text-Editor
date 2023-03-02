@@ -5,6 +5,10 @@
 
 This is a single-page text editor application that features a number of data persistence techniques that serve as redundancy in case one of the options is not supported. It allows the user to create notes or code snippets with or without an internet connection that are saved locally and can be retrieved for later use.
 
+Below is a screenshot of the deployed application:
+
+<img src="./Assets/JATE.png" alt="JATE Screenshot" width="70%">
+
 ## Table of Contents
 
 - [Credits](#credits)
